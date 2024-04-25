@@ -1,0 +1,607 @@
+Atividade 1
+
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    for(i = 50; i <= 250; i++) {
+        printf("%d\n", i); 
+    }
+
+    return 0;
+}
+
+Atividade 2
+
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    for(i = 3000; i >= 100; i--) {
+        printf("%d\n", i); 
+    }
+
+    return 0;
+}
+
+Atividade 3
+
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    for (i = 0; i <= 30; i++) {
+        if (i % 2 == 0) {
+            printf("%d\n", i);
+        }
+    }
+
+    return 0;
+}
+
+Atividade 4
+
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    for (i = 29; i >= 1; i--) {
+        if (i % 2 == 1) {
+            printf("%d\n", i);
+        }
+    }
+
+    return 0;
+}
+
+Atividade 5
+
+#include <stdio.h>
+
+int main() {
+    int soma = 0;
+    int i;
+
+    for (i = 0; i <= 100; i++) {
+        soma += i; 
+    }
+
+    printf("A soma dos numeros de 0 a 100 eh: %d\n", soma);
+
+    return 0;
+}
+
+Atividade 6
+
+#include <stdio.h>
+
+int main() {
+    int soma = 0;
+    int i;
+
+    for (i = 600; i <= 1000; i++) {
+        soma += i; 
+    }
+
+    printf("A soma dos numeros de 600 a 1000 eh: %d\n", soma);
+
+    return 0;
+}
+
+Atividade 7
+
+#include <stdio.h>
+
+int main() {
+    int nu = 6;
+    int fatorial = 1;
+
+    for(int i = 1; i <= nu; i++){
+        fatorial *= i;
+    }
+
+    printf("O fatorial de 6 eh: %d\n", fatorial);
+
+    return 0;
+}
+
+Atividade 8
+
+#include <stdio.h>
+
+int main() {
+    int nu;
+    int fatorial = 1;
+
+    printf ("Insira um numero X: ");
+    scanf ("%d", &nu);
+
+    for(int i = 1; i <= nu; i++){
+        fatorial *= i;
+    }
+
+    printf("O fatorial de %d eh: %d\n", nu, fatorial);
+
+    return 0;
+}
+
+Atividade 9
+
+#include <stdio.h>
+
+int main() {
+    int soma = 0;
+    int contador = 0;
+
+    for (int i = 5; i <= 150; i++) {
+        soma += i;
+        contador++;
+    }
+
+    float media = (float)soma / contador;
+
+    printf("A media dos numeros de 5 a 150 eh: %.2f\n", media);
+
+    return 0;
+}
+
+Atividade 10
+
+#include <stdio.h>
+
+int main() {
+    int soma = 0;
+    int contador = 0;
+
+    for (int i = 200; i <= 350; i++) {
+        soma += i;
+        contador++;
+    }
+
+    float media = (float)soma / contador;
+
+    printf("A media dos numeros de 200 a 350 eh: %.2f\n", media);
+
+    return 0;
+}
+
+Atividade 11
+
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    for (i = 111; i <= 350; i++) {
+        if (i % 2 == 0) {
+
+            printf("%d\n", i);
+        }
+    }
+
+    return 0;
+}
+
+Atividade 12
+
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    for (i = 0; i <= 2500; i++) {
+        if (i % 2 == 1) {
+            printf("%d\n", i);
+        }
+    }
+
+    return 0;
+}
+
+Atividade 13
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2, soma = 0, contador = 0;
+    float media;
+
+    printf ("Insira o primeiro numero para saber a media dos numeros entre ele e o segundo: ");
+    scanf ("%d", &num1);
+    printf ("Insira o segundo numero: ");
+    scanf ("%d", &num2);
+
+    if (num1 > num2) {
+        printf ("Erro: O primeiro numero deve ser menor ou igual ao segundo numero.\n");
+        return 1;
+    }
+
+    for (int i = num1; i <= num2; i++) {
+        soma += i;
+        contador++;
+    }
+
+    media = (float)soma / contador;
+
+    printf("A media dos numeros entre %d e %d eh: %.2f\n", num1, num2, media);
+
+    return 0;
+}
+
+Atividade 14
+
+#include <stdio.h>
+
+int main() {
+    char nome[3][50];
+    int i;
+
+    for (i = 0; i < 3; i++) {
+        printf ("Insira o nome %d: ", i + 1);
+        scanf ("%s", nome[i]);
+    }
+
+    printf ("\nOs nomes digitados sao:\n");
+    for (i = 0; i < 3; i++) {
+        printf ("nome %d: %s\n", i + 1, nome[i]);
+    }
+
+    return 0;
+}
+
+Atividade 15
+
+#include <stdio.h>
+
+float calmed (float notas[], int numn) {
+    float soma = 0;
+    for (int i = 0; i < numn; i++) {
+        soma += notas[i];
+    }
+    return soma / numn;
+}
+
+int main() {
+    const int numa = 5;
+    const int numn = 3;
+
+    for (int i = 0; i < numa; i++) {
+        char nome[50];
+        float notas[numn];
+
+        printf("Insira o nome do aluno %d: ", i + 1);
+        scanf("%s", nome);
+
+        printf("Insira as notas para o aluno %s:\n", nome);
+        for (int j = 0; j < numn; j++) {
+            printf("Nota %d: ", j + 1);
+            scanf("%f", &notas[j]);
+        }
+
+        float media = calmed(notas, numn);
+        printf("A mrdia do aluno %s eh: %.2f\n", nome, media);
+    }
+
+    return 0;
+}
+
+Atividade 16
+
+#include <stdio.h>
+
+float calmed (float notas[], int numn) {
+    float soma = 0;
+    for (int i = 0; i < numn; i++) {
+        soma += notas[i];
+    }
+    return soma / numn;
+}
+
+int main() {
+    const int numa = 1;
+    const int numn = 3;
+    int nu;
+    char nome[50];
+
+    printf("Insira o nome do aluno: ");
+    scanf("%s", nome);
+
+    for (int i = 0; i < numa; i++) {
+        float notas[numn];
+
+        printf("Insira as notas do aluno %s:\n", nome);
+        for (int j = 0; j < numn; j++) {
+            printf("Nota %d: ", j + 1);
+            scanf("%f", &notas[j]);
+        }
+
+        float media = calmed(notas, numn);
+        printf("A media do aluno %s eh: %.2f\n", nome, media);
+    }
+
+    printf ("Se quiser continuar digite 1 caso nao queira digite 0: ");
+    scanf ("%d", &nu);
+
+    if (nu == 0){
+        printf ("Encerrado");
+    }else if (nu == 1) {
+        printf ("Continuar leitura");
+    }else {
+        printf ("Numero inserido esta errado");
+    }
+
+    return 0;
+}
+
+Atividade 17
+
+#include <stdio.h>
+
+int main() {
+    int nu, quant, i;
+
+    printf ("Insira a quantidade de numeros que quer:\n");
+    scanf ("%d", &quant);
+
+    printf ("Insira os numeros que deseja:\n");
+
+    for (i = 0; i < quant; i++) {
+        scanf ("%d", &nu);
+
+        if (nu % 2 == 0){
+            printf("O %d e par.\n", nu);
+        }else {
+            printf ("O %d e impar.\n", nu);
+        }
+    }
+
+    return 0;
+}
+
+Atividade 18
+
+#include <stdio.h>
+
+int main() {
+    int nu, quant, i, soma;
+
+    printf ("Insira a quantidade de numeros que quer:\n");
+    scanf ("%d", &quant);
+
+    for (i = 0; i < quant; i++) {
+        printf ("Insira o numero que deseja:\n", i+1);
+        scanf ("%d", &nu);
+        soma += nu;
+    }
+
+    printf ("A soma dos numeros eh: %d", soma); 
+
+    return 0;
+}
+
+Atividade 19 
+
+#include <stdio.h>
+
+int main() {
+    int quant, i;
+    float soma, nu;
+
+    printf ("Insira a quantidade de numeros que quer:\n");
+    scanf ("%d", &quant);
+
+    for (i = 0; i < quant; i++) {
+        printf ("Insira o numero que deseja (so sera somado numeros acima de 5):\n", i+1);
+        scanf ("%f", &nu);
+        if (nu > 5){
+        soma += nu;
+        }
+    }
+
+    printf ("A soma dos numeros eh: %.2f", soma); 
+
+    return 0;
+}
+
+Atividade 20
+
+#include <stdio.h>
+
+int main() {
+    int quant, i;
+    float nu;
+
+    printf ("Insira a quantidade de numeros que quer:\n");
+    scanf ("%d", &quant);
+
+    for (i = 0; i < quant; i++) {
+        printf ("\nInsira numeros positivos e negativos:\n", i+1);
+        scanf ("%f", &nu);
+        if (nu < 0){
+            printf ("\n%.2f e um numero negativo", nu);
+        }else {
+            printf ("\n%.2f e um numero positivo", nu);
+        }
+    }
+    
+
+    return 0;
+}
+
+Atividade 21
+
+#include <stdio.h>
+
+int main() {
+    int numero, soma = 0;
+
+    printf("Insira os numeros (digite 0 para encerrar):\n");
+
+    for (;;) {
+        scanf("%d", &numero);
+
+        if (numero == 0) {
+            break;
+        }
+
+        if (numero > 0) {
+            soma += numero;
+        }
+    }
+
+    printf("A soma dos numeros positivos eh: %d\n", soma);
+
+    return 0;
+}
+
+Atividade 22
+
+#include <stdio.h>
+
+int main() {
+    int numero, soma = 0, cont = 0;
+
+    printf("Insira os numeros (digite 0 para encerrar):\n");
+
+    for (;;) {
+        scanf("%d", &numero);
+
+        if (numero == 0) {
+            break;
+        }
+
+        if (numero >= 10) {
+            soma += numero;
+        }else {
+            cont++;
+        }
+    }
+
+    printf ("A soma dos numeros positivos eh: %d\n", soma);
+    printf ("A quantidade de numeros menores que 10 eh: %d\n", cont);
+
+    return 0;
+}
+
+Atividade 23
+
+#include <stdio.h>
+
+int main() {
+    int termo = 1;
+    int i;
+
+    printf("Os 20 termos da serie sao:\n");
+
+    for (i = 0; i < 20; i++) {
+        printf("%d ", termo);
+        termo *= 3;  
+    }
+
+    return 0;
+}
+
+Atividade 24
+
+#include <stdio.h>
+
+int calp(int numa, int numb) {
+    int resul = 1;
+    int contador = 0;
+
+    while (contador < numb) {
+        resul *= numa;
+        contador++;
+    }
+    return resul;
+}
+
+int main() {
+    int numa, numb;
+    printf("Insira dois numeros inteiros (a e b): ");
+    scanf("%d %d", &numa, &numb);
+
+    int resul = calp(numa, numb);
+
+    printf("%d elevado a %d e igual a %d\n", numa, numb, resul);
+
+    return 0;
+}
+
+Atividade 25
+
+#include <stdio.h>
+
+int mult(int numa, int numb) {
+    int resul = 0;
+    int i;
+
+    for (i = 0; i < numb; i++) {
+        resul += numa;
+    }
+    return resul;
+}
+
+int main() {
+    int numa, numb;
+    
+    printf("Insira o primeiro numero (a): ");
+    scanf("%d", &numa);
+    printf("Insira o segundo numero (b): ");
+    scanf("%d", &numb);
+    
+    printf("O resultado da multiplicacao eh: %d\n", mult(numa, numb));
+
+    return 0;
+}
+
+Atividade 26
+
+#include <stdio.h>
+
+int main() {
+    int cop;
+    float vlt = 0.0;
+    
+    printf("Insira o codigo do produto 1, 2 , 3 e 4 (ou 0 para encerrar): ");
+    scanf("%d", &cop);
+    
+    while (cop != 0) {
+        int quant;
+        float preuni;
+
+        switch (cop) {
+            case 1:
+                preuni = 2.50;
+                break;
+            case 2:
+                preuni = 3.00;
+                break;
+            case 3:
+                preuni = 3.50;
+                break;
+            case 4:
+                preuni = 2.50;
+                break;
+            default:
+                printf("Codigo de produto invalido.\n");
+                continue; 
+        }
+        
+        printf("Insira a quantidade: ");
+        scanf("%d", &quant);
+        
+        vlt += quant * preuni;
+        
+        printf("Insira o codigo do produto 1, 2 , 3 e 4 (ou 0 para encerrar): ");
+        scanf("%d", &cop);
+    }
+    
+    printf("Valor total da compra: R$%.2f\n", vlt);
+    
+    return 0;
+}
